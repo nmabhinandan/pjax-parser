@@ -1,0 +1,33 @@
+{
+  "name": "pjax-parser",
+  "version": "1.0.0",
+  "description": "Express middleware to handle pjax requests",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp watch",
+    "test": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nmabhinandan/pjax-parser.git"
+  },
+  "keywords": [
+    "pjax",
+    "express",
+    "node"
+  ],
+  "author": "Abhinandan <nmabhinandan@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nmabhinandan/pjax-parser/issues"
+  },
+  "homepage": "https://github.com/nmabhinandan/pjax-parser#readme",
+  "devDependencies": {
+    "babel-eslint": "^4.0.5",
+    "eslint": "^1.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.0",
+    "gulp-sourcemaps": "^1.5.2"
+  }
+}
