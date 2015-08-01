@@ -4,6 +4,7 @@ Express middleware to handle pjax requests
 
 [![npm version](https://badge.fury.io/js/pjax-parser.svg)](http://badge.fury.io/js/pjax-parser)
 [![Code Climate](https://codeclimate.com/github/nmabhinandan/pjax-parser/badges/gpa.svg)](https://codeclimate.com/github/nmabhinandan/pjax-parser)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/nmabhinandan/pjax-parser/blob/master/LICENSE)
 
 ## Installation
 `npm install pjax-parser --save`
