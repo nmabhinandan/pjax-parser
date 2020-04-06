@@ -1,12 +1,13 @@
 {
   "name": "pjax-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Express middleware to handle pjax requests",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
     "dev": "gulp watch",
-    "test": "karma start --single-run"
+    "test": "karma start --single-run",
+    "lint": "eslint . --ext .ts"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,16 @@
   },
   "homepage": "https://github.com/nmabhinandan/pjax-parser#readme",
   "devDependencies": {
-    "babel-eslint": "^4.0.5",
-    "eslint": "^1.0.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.0",
-    "gulp-sourcemaps": "^1.5.2"
+    "@types/express": "^4.17.4",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "gulp": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "typescript": "^3.8.3"
+  },
+  "peerDependencies": {
+    "express": "^4.15.0"
   }
 }

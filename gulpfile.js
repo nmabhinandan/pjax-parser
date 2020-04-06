@@ -1,17 +1,22 @@
-var gulp = require('gulp');
-var babel = require('gulp-babel');
-var sourcemaps = require('gulp-sourcemaps');
+var gulp = require("gulp");
+var ts = require("gulp-typescript");
+var tsProject = ts.createProject("tsconfig.json");
+var sourcemaps = require("gulp-sourcemaps");
 
-gulp.task('build', function () {
-    return gulp.src('lib/index.js')
-        .pipe(sourcemaps.init())
-        .pipe(babel())
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('.'));
+gulp.task("build", function() {
+  return gulp
+    .src("lib/index.ts")
+    .pipe(sourcemaps.init())
+    .pipe(tsProject())
+    .pipe(sourcemaps.write(".", { includeContent: true }))
+    .pipe(gulp.dest("."));
 });
 
-gulp.task('watch', ['build'], function() {
-  gulp.watch('lib/*.js', ['build']);
-})
+gulp.task(
+  "watch",
+  gulp.series("build", function() {
+    gulp.watch("lib/*.ts", gulp.series("build"));
+  })
+);
 
-gulp.task('default', ['build'])
+gulp.task("default", gulp.series("build"));
